@@ -5,6 +5,10 @@
 Below functions are available:
 
 ```rust
+pub use po_file_read_v3 as po_file_read;
+pub use po_file_write_v2 as po_file_write;
+pub use po_message_check_format_v2 as po_message_check_format;
+
 pub fn po_file_create() -> po_file_t;
 pub fn po_file_read_v3(filename: *const c_char, handler: po_xerror_handler_t) -> po_file_t;
 pub fn po_file_write_v2(file: po_file_t, filename: *const c_char, handler: po_xerror_handler_t) -> po_file_t;

@@ -4,6 +4,10 @@
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
+pub use po_file_read_v3 as po_file_read;
+pub use po_file_write_v2 as po_file_write;
+pub use po_message_check_format_v2 as po_message_check_format;
+
 #[cfg(test)]
 mod tests {
     use std::{ffi::CString, os, ptr};
